@@ -1,0 +1,117 @@
+body{
+    background-image: url(../img/13.jpg);
+    background-size: 1800px;
+}
+ aside{
+    float: left;
+    background: #dce7e8;
+    width: 17%;
+    padding:1.0%;
+    height: 100vh;
+    color: #8f1515;
+    border-right: 3px solid #88fcb7;
+ }
+aside h3{
+    margin-top: 30px;
+    front-size: 28px;
+}
+aside ul {list-style: none}
+aside ul li {
+    color: #2a6666;
+    display: block;
+    margin-top: 10px;
+    transition: transform.6s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color:#e813c4 ;
+    text-decoration: none ;
+    transform: scale(1.05);
+}
+main {
+    float: left;
+    color: #8a0414 ;
+    margin-top: 35px;
+    text-align: center;
+    width: 75%;
+    text-indent: 10px;
+
+    }
+main h1 {front-size: 50px; color: #8a0414; text-decoration: underline;
+    font-size: 60px;
+    text-align: center;
+    text-shadow:#cccccc -17px -8px 6px;
+
+}
+main p {background: linear-gradient(-45deg, #f1f5e4, #e8d0f7);
+  color: #6f8a04;
+  margin-top: 30px;
+  outline: 5px solid #e8d0f7;
+  font-weight:700;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+main ul  {
+    list-style: none;
+    text-align: left;
+    }
+main ul li {
+    color:#65871c;
+    font-size: 27px;
+    margin-top: 3px;
+    font-weight:500;
+    text-align: left;
+}
+main ul li:hover{
+    color:#e813c4 ;
+    text-decoration: none ;
+    transform: scale(1.05);
+}
+main .features{
+    margin-top: 50px;
+}
+
+.alert-warning{
+
+    margin:2%;
+    background: #bcdce0c9;
+    outline: 3px solid #e8d0f7;
+    margin-top: 20px;
+    width: 76%;
+
+    padding:2.0%;
+    border-top: 1px solid transparent;
+}
+.alert-warning p{
+    background: none;
+    margin-top: 10px;
+    outline: none;
+    float: center;
+    margin: 0;
+    color:1c5701fd ;
+}
+.alert-warning img{
+    width: 90%;
+}
+.alert-warning b{
+    float: left;
+    background: none;
+    margin-top: 10px;
+    outline: none;
+    font-size: 20px;
+    margin: 0;
+}
+main .reg {
+    color:red ;
+    list-style: none;
+    text-align: left;
+}
+main a{
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #c4f2dad8;
+    color: #2a6666;
+    margin: 30px;
+    border-radius: 12px;
+}

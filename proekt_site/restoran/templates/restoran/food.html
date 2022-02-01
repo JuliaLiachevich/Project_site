@@ -1,0 +1,20 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Регистрация ресторана{% endblock %}
+{% block content %}
+    <h1>Добавить блюдо</h1>
+    <form method="post" enctype="multipart/form-data" style="color: #339605; background-color: #ecebf5; border-radius: 12px;
+        font-size: 18px; vertical-align:super; padding: 15px 10px 15px 10px; margin: 3%;  ">
+        {% csrf_token %}
+        <b>Название блюда </b>{{ form.title}}<br><br>
+        <b>Категория </b>{{ form.kategor }}<br><br>
+        {{ form.foto }}<br><br>
+        <b>Полный список ингридиентов: </b> {{ form.full_text }}<br><br>
+        <b>Вес блюда: </b>{{ form.masa }} гр. <br><br>
+        <b>Стоимость: </b>{{ form.cena }} руб. <br><br>
+        <b>Выберете ресторан </b> {{ form.name_restoran }}<br>
+        <br>
+        <span> {{error}}</span>
+        <button class="btn btn-success" type="submit">Зарегистрировать</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Регистрация пользователя{% endblock %}
+{% block login %}
+    <div class="large-offset-3 large-6 columns" >
+        <form action="{% url 'login_user'%}" method="post" style="font-size: 24px;">
+            {% csrf_token %}
+            <label for="username">Имя пользователя</label> <br>
+            <input type="text" name="username" id="username"> <br>
+            <label for="password">Пароль</label> <br>
+            <input type="password" name="password" id="password"><br>
+            {% if login_error %} <br>
+                <label class="error">{{login_error}} </label><br>
+            {% endif%} <br>
+            <input class="button" type="submit" value="Войти">
+
+        </form>
+
+
+    </div>
+{% endblock %}

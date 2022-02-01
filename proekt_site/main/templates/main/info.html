@@ -1,0 +1,21 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+          <h1>Блюда для тебя </h1>
+          <p> Данный сайт помогает людям с особенностями питания найти для них блюда из ресторанов </p>
+     <div class="features" >
+          <ul >
+               <a href="{% url 'allergia'%}"><li>Аллергии</li></a>
+               <a href="{% url 'bezgluten'%}"><li>Безглютеновые блюда</li></a>
+               <a href="{% url 'bezlactoz'%}"><li>Безлактозные блюда</li></a>
+               <a href="{% url 'diabet'%}"><li>Блюда при сахарном диабете</li></a>
+               <a href="{% url 'vegan'%}"><li>Блюда для вегетарианцев</li></a>
+
+          </ul>
+
+     </div>
+{% endblock %}
+

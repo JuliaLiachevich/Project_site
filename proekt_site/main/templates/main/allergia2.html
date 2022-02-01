@@ -1,0 +1,21 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Аллергия{% endblock %}
+
+{% block content %}
+     <h1>Блюда при пищевых аллергиях </h1>
+     <p> Данная категоря для людей у которых когда-либо проявлялись нежелетельные симптомы после упостребления определенных продуктов питания </p>
+     {% for el in bluda %}
+        <div class="alert-warning">
+            <h3>{{ el.title}}</h3>
+            <b> Категория:</b><p> {{ el.kategor }}</p>
+            <img src="{{ el.foto.url }}">
+            <b>Состав блюда:</b> <p> {{ el.full_text }}</p>
+            <b>Вес блюда:</b><p> {{ el.masa }} гр.</p>
+            <b>Стоимость:</b><p> {{ el.cena }} руб.</p>
+            <b>Ресторан:</b><p> <p><a href="{% url 'about' el.name_restoran.id %}" style=" color: #327807;" > {{ el.name_restoran }} </a>
+        </div>
+    {% endfor%}
+
+     {{usertext}}
+{% endblock %}

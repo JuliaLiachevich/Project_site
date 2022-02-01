@@ -1,0 +1,21 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Вегетарианцы{% endblock %}
+
+{% block content %}
+     <h1>Блюда вегетарианцев </h1>
+     <p> Данный сайт найти блюда с растительными и молочными продуктами при отказе от пищи животного происхождения  </p>
+
+    {% for el in bluda %}
+        <div class="alert-warning">
+            <h3>{{ el.title}}</h3>
+            <b> Категория:</b><p> {{ el.kategor }}</p>
+            <img src="{{ el.foto.url }}">
+            <b>Состав блюда:</b> <p> {{ el.full_text }}</p>
+            <b>Вес блюда:</b><p> {{ el.masa }} гр.</p>
+            <b>Стоимость:</b><p> {{ el.cena }} руб.</p>
+            <b>Ресторан:</b><p> <p><a href="{% url 'about' el.name_restoran.id %}" style=" color: #327807;" > {{ el.name_restoran }} </a>
+        </div>
+    {% endfor%}
+{% endblock %}
+

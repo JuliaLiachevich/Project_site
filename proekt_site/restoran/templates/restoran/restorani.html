@@ -1,0 +1,22 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Рестораны{% endblock %}
+{% block content %}
+    <h1>Рестораны</h1>
+    <dif class="reg" style=" display: inline-block; padding: 15px 5px; margin: 0 5px; font-size: 20px;" >
+        <a href="{% url 'register'%}" style=" color: #057496;" >Регистрация рестотанов </a> | <a href="{% url 'food'%}" style=" color: #057496;">Добавить блюдо</a>
+    </dif>
+    <br><br>
+
+    {% for el in restoran %}
+        <div class="alert-warning">
+            <h3>{{ el.nazvan}}</h3>
+            <p>{{ el.adres }}
+            <p>{{ el.telefon }}</p>
+            <p><a href="{% url 'about' el.id %}" > Подробнее </a></p>
+        </div>
+
+
+    {% endfor%}
+
+{% endblock %}

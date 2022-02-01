@@ -1,0 +1,13 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}{{ restoran.nazvan}}{% endblock %}
+{% block content %}
+     <h1>{{ restoran.nazvan}} </h1>
+    <p>Адрес: {{ restoran.adres}}</p>
+    <p>Телефон: {{ restoran.telefon}}</p> <br>
+    <img src="{{ restoran.foto.url }}" style="width: 50%;">
+    <b style="float: left; margin-top: 20px; font-size: 20px; margin: 10;">
+        {{ restoran.content}}  </b> <br>
+    <br><br>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'main/globo.html' %}
+{%load static%}
+{% block title %}Аллергия{% endblock %}
+{% block content %}
+<h1>Блюда при пищевых аллергиях </h1>
+<p> Данная категоря для людей у которых когда-либо проявлялись нежелетельные симптомы после упостребления определенных
+    продуктов питания </p>
+<form action="{% url 'allergia2' %}">
+    <textarea placeholder="Введите через пробел продукты, на которые у  Вас аллергия" cols="60" rows="1"
+              name="usertext" ></textarea>
+
+    <b><input type="submit"  value="Поиск" style="color: #e3021c; background-color: #ecebf5; border-radius: 12px;
+        font-size: 20px; vertical-align:super;  "></b>
+</form>
+{% endblock %}
+
+
+
